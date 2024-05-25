@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Her kan I se et udvalg af mine projekter fra 1. semester på KEA Multimediedesigner">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peter's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/eksamenlogo.svg" alt="Logo">
+                </a>
+            </div>
+            <div class="burger-menu" onclick="toggleMenu()">
+                <div class="burger-icon bar1"></div>
+                <div class="burger-icon bar2"></div>
+                <div class="burger-icon bar3"></div>
+            </div>
+            <div class="menu-items">
+                <a onclick="scrollToSection('section1')">Projekter</a>
+                <a onclick="scrollToSection('section8')">Om mig</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="music-container">
+            <audio id="myAudio" src="baggrundsmusik.mp3"></audio>
+            <img id="playPauseBtn" src="images/playknap.svg" alt="Play" onclick="togglePlayPause()">
+        </div>
+        <!-- Music by <a href="https://pixabay.com/users/olexy-25300778/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=168379">Olexy</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=168379">Pixabay</a> -->
+        <div class="forside slide">
+            <video autoplay muted loop id="myVideo">
+                <source src="http://www.peteramoras.dk/kea/forsidevideo.mp4" type="video/mp4">
+                <!-- Video by <a href="https://pixabay.com/users/bellergy-1846871/?utm_source=link-attribution&utm_medium=referral&utm_campaign=video&utm_content=34608">Bellergy RC</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=video&utm_content=34608">Pixabay</a> -->
+            </video>
+            <div class="forsidetekst">
+                <h1>Velkommen til min portfolio</h1>
+                <br>
+                <p>Her kan I se et udvalg af mine projekter fra 1. semester på KEA Multimediedesigner</p>
+                <br>
+                <button class="roedknap" onclick="scrollToSection('section1')">Projekter</button>
+                <label for="light-mode">Save power?</label>
+                <input type="checkbox" id="light-mode">
+            </div>
+        </div>
+
+        <div class="projekter slide" id="section1">
+            <div class="projekter-container">
+                <div class="grid-item">
+                    <a onclick="scrollToSection('section2')">
+                        <h2>Grundlæggende web - Studiestartsprøven</h2>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a onclick="scrollToSection('section3')">
+                        <h2>Grundlæggende UX/UI - Præsentation</h2>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a onclick="scrollToSection('section4')">
+                        <h2>Grundlæggende UX/UI - Dokumentation</h2>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a onclick="scrollToSection('section5')">
+                        <h2>Grundlæggende animation - Temaopgave</h2>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a onclick="scrollToSection('section6')">
+                        <h2>Grundlæggende indhold - Videosite</h2>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a onclick="scrollToSection('section7')">
+                        <h2>Grundlæggende indhold - Virksomhedssite</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide projekt1" id="section2">
+            <div class="projekt-container">
+                <!-- Slideshow 1 CHAT GPT -->
+                <div class="slideshow-container" id="slideshow1">
+                    <div class="mySlides">
+                        <img loading="lazy" src="images/01_01.webp" alt="kode eksempel">
+                    </div>
+                    <div class="mySlides">
+                        <img loading="lazy" src="images/01_02.webp" alt="billede eksempel">
+                    </div>
+                    <div class="mySlides">
+                        <img loading="lazy" src="images/01_03.webp" alt="kode eksempel">
+                    </div>
+                    <div class="mySlides">
+                        <img loading="lazy" src="images/01_04.webp" alt="kode eksempel">
+                    </div>
+                    <div class="mySlides">
+                        <img loading="lazy" src="images/01_05.webp" alt="web p">
+                    </div>
+                    <!-- Add more slides as needed -->
+
+                    <a class="prev" onclick="plusSlides(-1, 'slideshow1')">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 'slideshow1')">&#10095;</a>
+                </div>
+                <div class="projekt-container-tekst">
+                    <h2>Grundlæggende web - Studiestartsprøven</h2>
+                    <br>
+                    <p>I studiestartsprøven arbejdede vi med at skabe et website, som nu også skulle virke på desktop.
+                        Vi skulle
+                        bruge
+                        layout-diagrammer til at organisere koden (hertil bruge id- og classnavne), og wireframes til at
+                        sætte koden op efter.
+                        Vi arbejdede også med fonte og farver. <br> <br> Vi fik udleveret tekst og billeder til
+                        websitet, og
+                        skulle også supplere ét
+                        billede og en tekst selv.
+                        For at få websitet til at virke på desktop, brugte jeg media queries, CSS Grid og CSS Flexbox.
+                        Jeg brugte
+                        Google Fonts til at importere
+                        mine valgte skrifttyper og fandt HEX-koder på mine valgte farver. <br> Senere har vi lært css
+                        variabler, som man kunne have
+                        brugt her, for ikke at skulle gentage den samme HEX-kode igen og igen. Jeg tog mit eget billede
+                        og brugte Squoosh til at
+                        komprimere og konvertere det til WebP.
+                    </p>
+                    <a href="https://www.peteramoras.dk/kea/02_web/01_website/website/index.html" target="_blank"
+                        class="roedknap">Se
+                        opgaveløsning</a>
+                    <a onclick="scrollToSection('section1')">Tilbage til projekt-oversigten</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="slide projekt2" id="section3">
+            <div class="projekt-container">
+                <!-- Slideshow 2 CHAT GPT -->
+                <div class="slideshow-container" id="slideshow2">
+                    <div class="mySlides">
+                        <img loading="lazy" src="images/02_01.webp" alt="præsentation">
+                    </div>
+                    <div class="mySlides">
+                        <img loading="lazy" src="images/02_02.webp" alt="præsentation">
+                    </div>
+                    <div class="mySlides">
+                        <img loading="lazy" src="images/02_03.webp" alt="præsentation">
+                    </div>
+                    <!-- Add more slides as needed -->
+
+                    <a class="prev" onclick="plusSlides(-1, 'slideshow2')">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 'slideshow2')">&#10095;</a>
+                </div>
+                <div class="projekt-container-tekst">
+                    <h2>Grundlæggende UX/UI - Præsentation</h2>
+                    <br>
+                    <p>I denne opgave skulle vi arbejde med at lave en præsentation af vores UX/UI forløb.
+                        Præsentationen skulle vare 7 minutter. Vi blev introduceret til præsentationsteknikker, såsom at
+                        finde hovedbudskabet, lave en fængende indledning og opsummerende afslutning.
+                        Jeg brugte Google Slides til at lave en visuel præsentation, som gik kronologisk igennem min
+                        proces. <br> <br> Jeg startede med at forklare et problem (min fængende indledning), og
+                        afsluttede
+                        præsentationen med at give løsningen på problemet (opsummerende afslutning).
+                        Jeg fik erfaring med at præsentere og skulle ramme en bestemt tid. Jeg lavede ikke en agenda for
+                        præsentationen, men fik lavet det senere i virksomheds-site-præsentationen, som skabte mere
+                        overblik for modtagerne.
+                    </p>
+                    <a href="https://docs.google.com/presentation/d/1AkIGJ1rzjDwjgSnDf5UZ_97mVN09hpNd9XFZYgxW2W4/edit?usp=sharing"
+                        target="_blank" class="roedknap">Se
+                        opgaveløsning</a>
+                    <a onclick="scrollToSection('section1')">Tilbage til projekt-oversigten</a>
+                </div>
+            </div>
+        </div>
+        <div class="slide projekt3" id="section4">
+            <div class="projekt-container">
+                <!-- Slideshow 3 CHAT GPT -->
+                <div class="slideshow-container" id="slideshow3">
+                    <div class="mySlides">
+                        <img loading="lazy" src="images/03_01.webp" alt="brainstorm">
+                    </div>
+                    <div class="mySlides">
+                        <img loading="lazy" src="images/03_02.webp" alt="wireframes">
+                    </div>
+                    <div class="mySlides">
+                        <img loading="lazy" src="images/03_03.webp" alt="styletile">
+                    </div>
+                    <div class="mySlides">
+                        <img loading="lazy" src="images/03_04.webp" alt="prototype">
+                    </div>
+                    <!-- Add more slides as needed -->
+
+                    <a class="prev" onclick="plusSlides(-1, 'slideshow3')">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 'slideshow3')">&#10095;</a>
+                </div>
+                <div class="projekt-container-tekst">
+                    <h2>Grundlæggende UX/UI - Dokumentation</h2>
+                    <br>
+                    <p>I dette projekt skulle vi samle en procesdokumentation over hele vores UX/UI tema. I temaet blev
+                        vi introduceret til Figma, som jeg også brugte til at lave procesdokumentationen.
+                        Derudover blev vi introduceret til researchmetoder, metoder til idéudvikling, userstories,
+                        lofi/hifi wireframes, lofi/hifi prototype i Figma og tests.
+                        Jeg lavede desk research på bl.a. eksisterende trends til dette forløbs website og lavede
+                        brainstorm på mine egne idéer. Først en overordnet, og derefter en mere specificeret.
+                        Derefter tegnede jeg wireframes i hånden for at få overblik over mit design, og designede
+                        derefter wireframes digitalt både lo-fi og hi-fi.
+                        Jeg brugte styletilet til at samle mine skrifttyper og farver. Vi blev også introduceret til
+                        moodboard, som jeg har brugt senere på semesteret i bl.a. eksamensprojektet.
+                        Efterfølgende brugte jeg Figma til at lave en digital prototype, så alt var på plads før der
+                        skulle kodes.
+                        Da kodningen var ovre lavede jeg en Lighthouse-test, og lærte at sætte meta-beskrivelser ind,
+                        for at optimere til søgemaskiner.
+                        Jeg har genbrugt alt jeg har lært i UX/UI forløbet i de efterfølgende projekter.
+                    </p>
+                    <a href="https://www.figma.com/file/ikOOTQXreedSSMZrNOLUSA/Durum-p%C3%A5-N%C3%B8rrebrogade?type=whiteboard&node-id=0%3A1&t=TCuDbq5I8QKofE0H-1"
+                        target="_blank" class="roedknap">Se
+                        opgaveløsning</a>
+                    <a onclick="scrollToSection('section1')">Tilbage til projekt-oversigten</a>
+                </div>
+            </div>
+        </div>
+        <div class="slide projekt4" id="section5">
+            <div class="projekt-container">
+                <!-- Slideshow 4 CHAT GPT -->
+                <div class="slideshow-container" id="slideshow4">
+                    <div class="mySlides">
+                        <img loading="lazy" src="images/04_01.webp" alt="spil">
+                    </div>
+                    <div class="mySlides">
+                        <img loading="lazy" src="images/04_02.webp" alt="game over">
+                    </div>
+                    <div class="mySlides">
+                        <img loading="lazy" src="images/04_03.webp" alt="spilskærm">
+                    </div>
+                    <div class="mySlides">
+                        <img loading="lazy" src="images/04_04.webp" alt="victory">
+                    </div>
+                    <div class="mySlides">
+                        <img loading="lazy" src="images/04_05.webp" alt="papirsprotyper">
+                    </div>
+                    <div class="mySlides">
+                        <img loading="lazy" src="images/04_06.webp" alt="musik html">
+                    </div>
+                    <div class="mySlides">
+                        <img loading="lazy" src="images/04_07.webp" alt="aktivitetsdiagramm og state machine diagram">
+                    </div>
+                    <!-- Add more slides as needed -->
+
+                    <a class="prev" onclick="plusSlides(-1, 'slideshow4')">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 'slideshow4')">&#10095;</a>
+                </div>
+                <div class="projekt-container-tekst">
+                    <h2>Grundlæggende animation - Temaopgave</h2>
+                    <br>
+                    <p>
+                        I dette tema arbejdede vi med at lave et animationsspil. Vi arbejdede som en start med
+                        idégenerering, stile og papirsprotyper for at finde et visuelt udtryk til vores spil. Dernæst
+                        lavede
+                        vi aktivitetsdiagrammer, for at have en visuel repræsentation af spillets funktionialitet.
+                        Vi lærte om CSS positioning, keyframe-animationer, JavaScript funktioner/konstanter/variabler og
+                        HTML audio tag. Vi blev også præsenteret for state machine diagrammer, som gav et overblik ift.
+                        at
+                        skrive JavaScript koden.
+                        Jeg researchede på stile og fandt inspiration i kawaii-stilen, og fra TV-serien South Park. Jeg
+                        designede karaktererne som SVG'er i Adobe Illustrator.
+                        Jeg valgte at implementere baggrundsmusik i mit spil, som jeg fandt gratis på Pixabay, og optog
+                        selv lydeffekter. Jeg lavede forskellige keyframe-animationer til de forskellige karakterer, som
+                        passede til udtrykket i spillet. Jeg brugte JavaScript funktioner til at få elementerne til at
+                        interagere med point- og livtavlen.
+                    </p>
+                    <a href="https://www.peteramoras.dk/kea/04_animation/website/spil.html" target="_blank"
+                        class="roedknap">Se
+                        opgaveløsning</a>
+                    <a onclick="scrollToSection('section1')">Tilbage til projekt-oversigten</a>
+                </div>
+            </div>
+        </div>
+        <div class="slide projekt5" id="section6">
+            <div class="projekt-container">
+                <!-- Slideshow 5 CHAT GPT -->
+                <div class="slideshow-container" id="slideshow5">
+                    <div class="mySlides">
+                        <img loading="lazy" src="images/05_01.webp" alt="adobe premiere">
+                    </div>
+                    <div class="mySlides">
+                        <img loading="lazy" src="images/05_02.webp" alt="videosite">
+                    </div>
+                    <!-- Add more slides as needed -->
+
+                    <a class="prev" onclick="plusSlides(-1, 'slideshow5')">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 'slideshow5')">&#10095;</a>
+                </div>
+                <div class="projekt-container-tekst">
+                    <h2>Grundlæggende indhold - Videosite</h2>
+                    <br>
+                    <p>
+                        I dette tema blev vi introduceret til videoproduktion og GitHub. Vi skulle også producere et
+                        website
+                        med vores videomateriale. Vi fik en introduktion til forskelligt kamera-udstyr som vi lånte i
+                        Tech&Story-Lab, og blev også præsenteret for Adobe Premiere.
+                        Derudover fik vi erfaring i at tage kontakt til en "kunde", og filme på location.
+                        Jeg klippede og colorgradede videomaterialet i Premiere, og tilføjede baggrundsmusik og titler.
+                        Vi genbrugte mange af de samme ting i virksomhedssite-projektet, hvor vi også brugte GitHub,
+                        filmede et interview og redigerede materialet i Adobe Premiere.
+
+
+                    </p>
+                    <a href="https://pemo0001.github.io/website_v2/" target="_blank" class="roedknap">Se
+                        opgaveløsning</a>
+                    <a onclick="scrollToSection('section1')">Tilbage til projekt-oversigten</a>
+                </div>
+            </div>
+        </div>
+        <div class="slide projekt6" id="section7">
+            <div class="projekt-container">
+                <!-- Slideshow 6 CHAT GPT -->
+                <div class="slideshow-container" id="slideshow6">
+                    <div class="mySlides">
+                        <img loading="lazy" src="images/06_01.webp" alt="trello">
+                    </div>
+                    <div class="mySlides">
+                        <img loading="lazy" src="images/06_02.webp" alt="github">
+                    </div>
+                    <div class="mySlides">
+                        <img loading="lazy" src="images/06_03.webp" alt="bert test">
+                    </div>
+                    <div class="mySlides">
+                        <img loading="lazy" src="images/06_04.webp" alt="redesign">
+                    </div>
+                    <div class="mySlides">
+                        <img loading="lazy" src="images/06_05.webp" alt="5 sekunders test">
+                    </div>
+                    <!-- Add more slides as needed -->
+
+                    <a class="prev" onclick="plusSlides(-1, 'slideshow6')">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 'slideshow6')">&#10095;</a>
+                </div>
+                <div class="projekt-container-tekst">
+                    <h2>Grundlæggende indhold - Virksomhedssite</h2>
+                    <br>
+                    <p>
+                        Dette tema gik ud på at redesigne en virksomheds hjemmeside. Vi blev introduceret til redskaber
+                        til
+                        at administrere en gruppeproces, som SCRUM, Trello og gruppekontrakt. Dernæst genbrugte vi
+                        GitHub, men nu som et gruppeprojekt med shared repository. Vi blev også introduceret til
+                        Netlify og forskellige tests - BERT-test og 5-sekunders-test.
+                        I dette projekt genbrugte vi mange, næsten alle, af de metoder som vi havde lært i de tidligere
+                        projekter.
+                        Vi fik erfaring med at arbejde som en gruppe, og brugte Trello til at administerere vores
+                        opgaver.
+                        Vi havde lidt udfordringer med at beslutte hvilken del af hjemmesiden vi ville redesigne, som
+                        endte med at koste os en del tid og besvær. Fremover skal vi være mere sikre på at vi teknisk
+                        kan udføre det vi sætter os for, før vi begynder at idégenerere.
+                        Vi fik mere erfaring med præsentation og blev præsenteret for Pecha Kucha, som vi benyttede os
+                        af i den endelige præsentation.
+                    </p>
+                    <a href="https://www.peteramoras.dk/kea/050201%20-%20Virksomhedssite-1.pdf" target="_blank"
+                        class="roedknap">Se
+                        opgaveløsning</a>
+                    <a onclick="scrollToSection('section1')">Tilbage til projekt-oversigten</a>
+                </div>
+            </div>
+        </div>
+        <div class="slide" id="section8">
+            <div class="ommig-container">
+                <img loading="lazy" src="images/portaet.webp" alt="portraet">
+                <div class="ommig-container-tekst">
+                    <h2>Peter Alexander Møller-Rasmussen</h2>
+                    <br>
+                    <p>
+                        Jeg fik min første introduktion til medieproduktion på KTS, hvor jeg studerede som
+                        webintegrator. Her blev jeg bekendt med webdesign, herunder HTML CSS & JavaScript.
+                        Efter grundforløbet tog jeg et arbejde hos storytelling-scenen BestTellers, hvor jeg arbejdede
+                        videre med bl.a. webdesign i Wordpress. Jeg udbyggede også mine evner indenfor HTML og CSS.
+                        <br>
+                        Hos BestTellers lærte jeg også om billedredigering og videoproduktion i Adobes programmer, ifbm.
+                        forskellige projekter.
+                        Sideløbende lavede jeg også mine egne video-, billede- og lydproduktioner som selvstændig
+                        musiker.
+                        <br>
+                        Da jeg startede på multimediedesigner-uddannelsen på KEA, havde jeg derfor allerede et godt
+                        kendskab til multimedie-verdenen.
+
+                        I dag kan jeg sige at nogle af mine kompetencer indebærer:
+                    </p>
+                    <ul>
+                        <li>HTML, CSS & JavaScript</li>
+                        <li>Billede- og videoredigering</li>
+                        <li>UX/UI</li>
+                        <li>Projektstyring</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-container slide">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.5955100354154!2d12.4940605122742!3d55.678633697589156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465253ddf4fc72bb%3A0x42eca7a6e1338380!2sPeter%20Bangs%20Vej%20152%2C%202000%20Frederiksberg!5e0!3m2!1sen!2sdk!4v1703852805827!5m2!1sen!2sdk"
+                    style="border:0;" title="kort" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                <form action="mailto:someone@example.com" method="post">
+                    <label for="name">Navn</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Besked</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">Send</button>
+                </form>
+                <div class="footertekst">
+                    <p><strong>Peter Alexander Møller-Rasmussen</strong></p>
+                    <p>Peter Bangs Vej 152</p>
+                    <p>Tlf.: 26 14 07 68</p>
+                    <p>pemo0001@stud.kea.dk</p>
+                </div>
+                <div class="footersocials">
+                    <a href="https://www.facebook.com/Peter8D" target="_blank">
+                        <img loading="lazy" src="images/facebook.webp" alt="facebook">
+                    </a>
+                    <a href="https://www.instagram.com/petermoellerrasmussen/" target="_blank">
+                        <img loading="lazy" src="images/instagram.webp" alt="instagram">
+                    </a>
+                    <a href="https://www.linkedin.com/in/peter-m%C3%B8ller-rasmussen-032169b4/" target="_blank">
+                        <img loading="lazy" src="images/linkedin.webp" alt="linkedin">
+                    </a>
+                </div>
+
+
+            </div>
+
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
